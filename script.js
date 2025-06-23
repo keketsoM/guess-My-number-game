@@ -10,7 +10,14 @@
 // console.log(document.querySelector('.guess').value);
 
 // document.querySelector('.check').addEventListener('click',);
-
+document.querySelector('.again').addEventListener('click', function(){
+  let score = 20;
+  document.querySelector('.score').textContent = 20;
+   document.querySelector('.message').textContent =
+      'Start guessing...';
+      document.querySelector('.guess').value = '';
+      document.querySelector('body').style.backgroundColor='#222';
+})
 const number = Math.random();
 let score = 20;
 const secretNumber = Math.trunc(Math.random() * 20 + 1);
@@ -44,7 +51,7 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('.message').textContent = '✔️💯🎉 Correct Number';
     document.querySelector('.score').textContent = score;
     
-    
+
     document.querySelector('body').style.backgroundColor='#60b347';
   }
 });
